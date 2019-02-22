@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import TextInput from './components/TextInput'
 import MarkdownOutput from './components/MarkdownOutput'
 import './App.css';
-const placeholder = `
-## A minimalist Markdown preview built with React
+const placeholder = `## A minimalist Markdown preview built with React <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="react-logo" width="50"/>
 ----
 ### What is Markdown?
 see [Wikipedia](http://en.wikipedia.org/wiki/Markdown)
@@ -17,7 +16,12 @@ see [Wikipedia](http://en.wikipedia.org/wiki/Markdown)
 
 ----
 ### Markdown quick reference
-# headers
+# h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
 
 *emphasis*
 
@@ -28,8 +32,7 @@ see [Wikipedia](http://en.wikipedia.org/wiki/Markdown)
 >block quote
 
     code (4 spaces indent)
-[links](http://wikipedia.org)
-`
+[links](http://wikipedia.org)`
 
 class App extends Component {
   state = {
@@ -58,12 +61,12 @@ class App extends Component {
               </header>
             </div>
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-6">
                 <div className="text-input-wrapper">
                   <TextInput handleInput={this.handleInput} placeholder={this.state.userInput}/>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-6">
                 <div className="markdown-preview-wrapper">
                   <MarkdownOutput userInput={this.state.userInput} />
                 </div>
