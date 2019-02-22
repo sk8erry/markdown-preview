@@ -53,6 +53,7 @@ class App extends Component {
         <div className="info">
           <span>Made by <a href="https://rickyyang.moe/">Ricky Yang</a></span><br/>
           <span>Powered by <a href="https://github.com/markedjs/marked">Marked</a></span><br/>
+          <span><a href="https://github.com/sk8erry/markdown-preview">Github repo</a></span>
         </div>
         <div className="container-fluid">
           <div className="content">
